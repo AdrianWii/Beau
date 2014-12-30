@@ -6,6 +6,8 @@
 
 package View;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author adrian
@@ -32,27 +34,38 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        Profil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/button_default_profile.png"))); // NOI18N
         Profil.setText("Profil");
+        Profil.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ProfilMouseEntered(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(139, 139, 139)
-                .addComponent(Profil)
-                .addContainerGap(237, Short.MAX_VALUE))
+                .addGap(20, 20, 20)
+                .addComponent(Profil, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(130, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(79, 79, 79)
-                .addComponent(Profil)
-                .addContainerGap(207, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
+                .addComponent(Profil, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(189, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ProfilMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProfilMouseEntered
+        ImageIcon II = new ImageIcon(getClass().getResource("Images/button_hover_profile.png"));
+        Profil.setIcon(II);
+    }//GEN-LAST:event_ProfilMouseEntered
 
     /**
      * @param args the command line arguments
@@ -90,6 +103,6 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Profil;
+    public javax.swing.JLabel Profil;
     // End of variables declaration//GEN-END:variables
 }
