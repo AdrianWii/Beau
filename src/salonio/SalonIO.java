@@ -9,6 +9,7 @@ package salonio;
 import Controler.Controler;
 import Model.Kontrahent;
 import View.Login;
+import Model.Model;
 import View.Subpage1;
 import java.io.IOException;
 
@@ -37,7 +38,9 @@ public class SalonIO {
         Login theLogin = new Login();
         Subpage1 theSubpage1 = new Subpage1();
         Kontrahent theKontrahent = new Kontrahent();
-        Controler theControler = new Controler(theLogin,theSubpage1,theKontrahent);
+        Model theModel = new Model();
+        Controler theControler = new Controler(theLogin,theSubpage1,theKontrahent,theModel);
+        theControler.Dodaj_Kontrahent(); // test
     }
     
 }

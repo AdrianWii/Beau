@@ -31,44 +31,74 @@ public class Kontrahent extends Uzytkownik{
     {
         this.nip=nnip;
     }
-    public Kontrahent DodajKontrahenta(String iimie, String nnazwisko, String ttelefon, String eemail, String mmiejscowosc,
+    public void DodajKontrahenta(String iimie, String nnazwisko, String ttelefon, String eemail, String mmiejscowosc,
             String uulica, String nnazwa_firmy, int nnip)
     {
-        Kontrahent nowy = new Kontrahent();
         if(iimie.length()>0)
-            nowy.set_imie(iimie);
+            this.set_imie(iimie);
         else
-            nowy.set_imie(null);
+            this.set_imie(null);
         if(nnazwisko.length()>0)
-            nowy.set_nazwisko(nnazwisko);
+            this.set_nazwisko(nnazwisko);
         else
-            nowy.set_nazwisko(null);
+            this.set_nazwisko(null);
         if(ttelefon.length()>0)
-             nowy.set_telefon(ttelefon);
+             this.set_telefon(ttelefon);
         else 
-            nowy.set_telefon(null);
+            this.set_telefon(null);
         if(eemail.length()>0)
-            nowy.set_email(eemail);
+            this.set_email(eemail);
         else 
-            nowy.set_email(null);
+            this.set_email(null);
         if(mmiejscowosc.length()>0)
-            nowy.set_miejscowosc(mmiejscowosc);
+            this.set_miejscowosc(mmiejscowosc);
         else
-            nowy.set_miejscowosc(null);
+            this.set_miejscowosc(null);
         if(uulica.length()>0)
-            nowy.set_ulica(uulica);
+            this.set_ulica(uulica);
         else
-            nowy.set_ulica(null);
+            this.set_ulica(null);
         if(nnazwa_firmy.length()>0)
-            nowy.set_nazwa_firmy(nnazwa_firmy);
+            this.set_nazwa_firmy(nnazwa_firmy);
         else
-            nowy.set_nazwa_firmy(null);
+            this.set_nazwa_firmy(null);
         if(nnip!=0)
-            nowy.set_nip(nnip);
+            this.set_nip(nnip);
         else 
-            nowy.set_nip(0);
-        
-        return nowy;
+            this.set_nip(0);
+
     }
+    
+    public void UsunKontrahenta()
+    {
+    
+    }
+    
+    public void EdytujKontrahenta(String iimie, String nnazwisko, String ttelefon, String eemail, String mmiejscowosc,
+            String uulica, String nnazwa_firmy, int nnip)
+    {
+        if(iimie.length()>0)
+            this.set_imie(iimie);
+        if(nnazwisko.length()>0)
+            this.set_nazwisko(nnazwisko);
+        if(ttelefon.length()>0)
+             this.set_telefon(ttelefon);
+        if(eemail.length()>0)
+            this.set_email(eemail);
+        if(mmiejscowosc.length()>0)
+            this.set_miejscowosc(mmiejscowosc);
+        if(uulica.length()>0)
+            this.set_ulica(uulica);
+        if(nnazwa_firmy.length()>0)
+            this.set_nazwa_firmy(nnazwa_firmy);
+        if(nnip!=0)
+            this.set_nip(nnip);
+    }
+    
+    public void SkontantujZKontrahentem()
+    {
+        
+    }
+    
  }
 
