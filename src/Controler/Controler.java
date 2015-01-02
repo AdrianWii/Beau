@@ -29,8 +29,9 @@ public class Controler {
     class keyListener implements ActionListener {
 
        public void actionPerformed(ActionEvent arg0)
-       {          
-             theSubpage1.setVisible(true);
+       {     
+            theLogin.setVisible(false);
+            theSubpage1.setVisible(true);
              
        }
     }
