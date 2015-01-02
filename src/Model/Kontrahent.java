@@ -34,7 +34,7 @@ public class Kontrahent extends Uzytkownik{
     public void DodajKontrahenta(String iimie, String nnazwisko, String ttelefon, String eemail, String mmiejscowosc,
             String uulica, String nnazwa_firmy, int nnip)
     {
-        if(iimie.length()>0)
+        if(iimie.length()>0)  
             this.set_imie(iimie);
         else
             this.set_imie(null);
@@ -71,7 +71,7 @@ public class Kontrahent extends Uzytkownik{
     
     public void UsunKontrahenta()
     {
-    
+      //...
     }
     
     public void EdytujKontrahenta(String iimie, String nnazwisko, String ttelefon, String eemail, String mmiejscowosc,
@@ -97,7 +97,7 @@ public class Kontrahent extends Uzytkownik{
     
     public void SkontantujZKontrahentem()
     {
-        
+        //...
     }
     
  }
