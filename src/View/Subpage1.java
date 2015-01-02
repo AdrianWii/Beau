@@ -34,6 +34,18 @@ public class Subpage1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        funkcyjny = new javax.swing.JLayeredPane();
+        tekst5 = new javax.swing.JLabel();
+        bg_background3 = new javax.swing.JLabel();
+        usun_produkt = new javax.swing.JLayeredPane();
+        tekst4 = new javax.swing.JLabel();
+        bg_button1 = new javax.swing.JLabel();
+        wizyty2 = new javax.swing.JLayeredPane();
+        tekst3 = new javax.swing.JLabel();
+        bg_background2 = new javax.swing.JLabel();
+        wizyty1 = new javax.swing.JLayeredPane();
+        tekst2 = new javax.swing.JLabel();
+        bg_background1 = new javax.swing.JLabel();
         wizyty = new javax.swing.JLayeredPane();
         tekst1 = new javax.swing.JLabel();
         bg_background = new javax.swing.JLabel();
@@ -49,12 +61,116 @@ public class Subpage1 extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        tekst5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        tekst5.setForeground(new java.awt.Color(255, 255, 255));
+        tekst5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tekst5.setLabelFor(tekst);
+        tekst5.setText("<html><center>FUNKCJE</center></html>");
+        tekst5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tekst5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                tekst5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                tekst5MouseExited(evt);
+            }
+        });
+        funkcyjny.add(tekst5);
+        tekst5.setBounds(0, 0, 110, 110);
+
+        bg_background3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/blue.png"))); // NOI18N
+        funkcyjny.add(bg_background3);
+        bg_background3.setBounds(0, 0, 110, 110);
+
+        getContentPane().add(funkcyjny, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, 110, 110));
+
+        usun_produkt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                usun_produktMouseEntered(evt);
+            }
+        });
+
+        tekst4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        tekst4.setForeground(new java.awt.Color(255, 255, 255));
+        tekst4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tekst4.setLabelFor(tekst);
+        tekst4.setText("USUŃ PRODUKT");
+        tekst4.setToolTipText("");
+        tekst4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tekst4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                tekst4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                tekst4MouseExited(evt);
+            }
+        });
+        usun_produkt.add(tekst4);
+        tekst4.setBounds(0, 0, 220, 110);
+
+        bg_button1.setForeground(new java.awt.Color(255, 255, 255));
+        bg_button1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/darkgray.png"))); // NOI18N
+        bg_button1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                bg_button1MouseEntered(evt);
+            }
+        });
+        usun_produkt.add(bg_button1);
+        bg_button1.setBounds(0, 0, 220, 110);
+
+        getContentPane().add(usun_produkt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, 220, 110));
+
+        tekst3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        tekst3.setForeground(new java.awt.Color(255, 255, 255));
+        tekst3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tekst3.setLabelFor(tekst);
+        tekst3.setText("<html><center>POKAŻ<br>WIZYTY</center></html>");
+        tekst3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tekst3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                tekst3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                tekst3MouseExited(evt);
+            }
+        });
+        wizyty2.add(tekst3);
+        tekst3.setBounds(0, 0, 110, 110);
+
+        bg_background2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/small_1.png"))); // NOI18N
+        wizyty2.add(bg_background2);
+        bg_background2.setBounds(0, 0, 110, 110);
+
+        getContentPane().add(wizyty2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 110, 110));
+
+        tekst2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        tekst2.setForeground(new java.awt.Color(255, 255, 255));
+        tekst2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tekst2.setLabelFor(tekst);
+        tekst2.setText("<html><center>USUŃ<br>WIZYTE</center></html>");
+        tekst2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tekst2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                tekst2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                tekst2MouseExited(evt);
+            }
+        });
+        wizyty1.add(tekst2);
+        tekst2.setBounds(0, 0, 110, 110);
+
+        bg_background1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/small_1.png"))); // NOI18N
+        wizyty1.add(bg_background1);
+        bg_background1.setBounds(0, 0, 110, 110);
+
+        getContentPane().add(wizyty1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 110, 110));
+
         tekst1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         tekst1.setForeground(new java.awt.Color(255, 255, 255));
         tekst1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tekst1.setLabelFor(tekst);
-        tekst1.setText("DODAJ WIZYTE");
-        tekst1.setToolTipText("");
+        tekst1.setText("<html><center>DODAJ<br>WIZYTE</center></html>");
         tekst1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tekst1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -172,12 +288,52 @@ public class Subpage1 extends javax.swing.JFrame {
     }//GEN-LAST:event_tekstMouseExited
 
     private void tekst1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tekst1MouseEntered
-        // TODO add your handling code here:
+        bg_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/small.png")));
     }//GEN-LAST:event_tekst1MouseEntered
 
     private void tekst1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tekst1MouseExited
-        // TODO add your handling code here:
+        bg_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/small_1.png")));
     }//GEN-LAST:event_tekst1MouseExited
+
+    private void tekst2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tekst2MouseEntered
+        bg_background1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/small.png")));
+    }//GEN-LAST:event_tekst2MouseEntered
+
+    private void tekst2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tekst2MouseExited
+        bg_background1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/small_1.png")));
+    }//GEN-LAST:event_tekst2MouseExited
+
+    private void tekst3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tekst3MouseEntered
+        bg_background2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/small.png")));
+    }//GEN-LAST:event_tekst3MouseEntered
+
+    private void tekst3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tekst3MouseExited
+        bg_background2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/small_1.png")));
+    }//GEN-LAST:event_tekst3MouseExited
+
+    private void tekst4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tekst4MouseEntered
+        bg_button1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/darkgray_1.png")));
+    }//GEN-LAST:event_tekst4MouseEntered
+
+    private void tekst4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tekst4MouseExited
+        bg_button1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/darkgray.png")));
+    }//GEN-LAST:event_tekst4MouseExited
+
+    private void bg_button1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bg_button1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bg_button1MouseEntered
+
+    private void usun_produktMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usun_produktMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usun_produktMouseEntered
+
+    private void tekst5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tekst5MouseEntered
+        bg_background3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/blue_1.png")));
+    }//GEN-LAST:event_tekst5MouseEntered
+
+    private void tekst5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tekst5MouseExited
+        bg_background3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/blue.png")));
+    }//GEN-LAST:event_tekst5MouseExited
 
     /**
      * @param args the command line arguments
@@ -226,12 +382,24 @@ public class Subpage1 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bg;
     private javax.swing.JLabel bg_background;
+    private javax.swing.JLabel bg_background1;
+    private javax.swing.JLabel bg_background2;
+    private javax.swing.JLabel bg_background3;
     private javax.swing.JLabel bg_button;
+    private javax.swing.JLabel bg_button1;
     private javax.swing.JLayeredPane dane_klienta;
     private javax.swing.JLabel exit;
+    private javax.swing.JLayeredPane funkcyjny;
     private javax.swing.JLabel minimize;
     private javax.swing.JLabel tekst;
     private javax.swing.JLabel tekst1;
+    private javax.swing.JLabel tekst2;
+    private javax.swing.JLabel tekst3;
+    private javax.swing.JLabel tekst4;
+    private javax.swing.JLabel tekst5;
+    private javax.swing.JLayeredPane usun_produkt;
     private javax.swing.JLayeredPane wizyty;
+    private javax.swing.JLayeredPane wizyty1;
+    private javax.swing.JLayeredPane wizyty2;
     // End of variables declaration//GEN-END:variables
 }

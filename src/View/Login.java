@@ -6,7 +6,9 @@
 
 package View;
 
+import Controler.Controler;
 import java.awt.Toolkit;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -36,7 +38,7 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        keyin = new javax.swing.JLabel();
+        key = new javax.swing.JButton();
         haslo = new javax.swing.JTextField();
         login = new javax.swing.JTextField();
         exit = new javax.swing.JLabel();
@@ -52,9 +54,18 @@ public class Login extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(800, 600));
         getContentPane().setLayout(null);
 
-        keyin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(keyin);
-        keyin.setBounds(610, 330, 70, 70);
+        key.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/key.png"))); // NOI18N
+        key.setBorder(null);
+        key.setBorderPainted(false);
+        key.setContentAreaFilled(false);
+        key.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        key.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                keyActionPerformed(evt);
+            }
+        });
+        getContentPane().add(key);
+        key.setBounds(617, 338, 59, 59);
 
         haslo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         haslo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -121,6 +132,13 @@ public class Login extends javax.swing.JFrame {
         this.setLocation(x, y);
     }//GEN-LAST:event_exitMouseDragged
 
+    private void keyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keyActionPerformed
+
+    }//GEN-LAST:event_keyActionPerformed
+    public void addkeyListener(ActionListener keey)
+    {
+        key.addActionListener(keey);
+    }
     /**
      * @param args the command line arguments
      */
@@ -168,9 +186,11 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel bg;
     private javax.swing.JLabel exit;
     private javax.swing.JTextField haslo;
-    private javax.swing.JLabel keyin;
+    private javax.swing.JButton key;
     private javax.swing.JTextField login;
     private javax.swing.JLabel minimize;
     private javax.swing.JLabel moving;
     // End of variables declaration//GEN-END:variables
+
+
 }
