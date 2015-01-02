@@ -6,6 +6,11 @@
 
 package View;
 
+import java.awt.Toolkit;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author adrian
@@ -15,8 +20,9 @@ public class Subpage1 extends javax.swing.JFrame {
     /**
      * Creates new form Subpage1
      */
-    public Subpage1() {
+    public Subpage1() throws IOException {
         initComponents();
+        setIcon();
     }
 
     /**
@@ -28,7 +34,12 @@ public class Subpage1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Profil = new javax.swing.JLabel();
+        wizyty = new javax.swing.JLayeredPane();
+        tekst1 = new javax.swing.JLabel();
+        bg_background = new javax.swing.JLabel();
+        dane_klienta = new javax.swing.JLayeredPane();
+        tekst = new javax.swing.JLabel();
+        bg_button = new javax.swing.JLabel();
         exit = new javax.swing.JLabel();
         minimize = new javax.swing.JLabel();
         bg = new javax.swing.JLabel();
@@ -36,25 +47,67 @@ public class Subpage1 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(800, 600));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(800, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Profil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/button_default_profile.png"))); // NOI18N
-        Profil.addMouseListener(new java.awt.event.MouseAdapter() {
+        tekst1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        tekst1.setForeground(new java.awt.Color(255, 255, 255));
+        tekst1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tekst1.setLabelFor(tekst);
+        tekst1.setText("DODAJ WIZYTE");
+        tekst1.setToolTipText("");
+        tekst1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tekst1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                ProfilMouseEntered(evt);
+                tekst1MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                ProfilMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                ProfilMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                ProfilMouseReleased(evt);
+                tekst1MouseExited(evt);
             }
         });
-        getContentPane().add(Profil, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
+        wizyty.add(tekst1);
+        tekst1.setBounds(0, 0, 110, 110);
+
+        bg_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/small_1.png"))); // NOI18N
+        wizyty.add(bg_background);
+        bg_background.setBounds(0, 0, 110, 110);
+
+        getContentPane().add(wizyty, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 110, 110));
+
+        dane_klienta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                dane_klientaMouseEntered(evt);
+            }
+        });
+
+        tekst.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        tekst.setForeground(new java.awt.Color(255, 255, 255));
+        tekst.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tekst.setLabelFor(tekst);
+        tekst.setText("DANE KLIENTA");
+        tekst.setToolTipText("");
+        tekst.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tekst.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                tekstMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                tekstMouseExited(evt);
+            }
+        });
+        dane_klienta.add(tekst);
+        tekst.setBounds(0, 0, 220, 110);
+
+        bg_button.setForeground(new java.awt.Color(255, 255, 255));
+        bg_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/darkgray.png"))); // NOI18N
+        bg_button.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                bg_buttonMouseEntered(evt);
+            }
+        });
+        dane_klienta.add(bg_button);
+        bg_button.setBounds(0, 0, 220, 110);
+
+        getContentPane().add(dane_klienta, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 220, 110));
 
         exit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         exit.setMaximumSize(new java.awt.Dimension(28, 28));
@@ -102,21 +155,29 @@ public class Subpage1 extends javax.swing.JFrame {
         this.setState(Login.ICONIFIED);
     }//GEN-LAST:event_minimizeMouseClicked
 
-    private void ProfilMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProfilMouseEntered
-        Profil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/button_hover_profile.png")));
-    }//GEN-LAST:event_ProfilMouseEntered
+    private void dane_klientaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dane_klientaMouseEntered
 
-    private void ProfilMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProfilMouseExited
-        Profil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/button_default_profile.png")));
-    }//GEN-LAST:event_ProfilMouseExited
+    }//GEN-LAST:event_dane_klientaMouseEntered
 
-    private void ProfilMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProfilMousePressed
-        Profil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/button_pressed_profile.png")));
-    }//GEN-LAST:event_ProfilMousePressed
+    private void bg_buttonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bg_buttonMouseEntered
+       bg_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/darkgray_1.png")));
+    }//GEN-LAST:event_bg_buttonMouseEntered
 
-    private void ProfilMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProfilMouseReleased
-        Profil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/button_default_profile.png")));
-    }//GEN-LAST:event_ProfilMouseReleased
+    private void tekstMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tekstMouseEntered
+       bg_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/darkgray_1.png")));
+    }//GEN-LAST:event_tekstMouseEntered
+
+    private void tekstMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tekstMouseExited
+        bg_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/darkgray.png")));
+    }//GEN-LAST:event_tekstMouseExited
+
+    private void tekst1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tekst1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tekst1MouseEntered
+
+    private void tekst1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tekst1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tekst1MouseExited
 
     /**
      * @param args the command line arguments
@@ -148,15 +209,29 @@ public class Subpage1 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Subpage1().setVisible(true);
+                try {
+                    new Subpage1().setVisible(true);
+                } catch (IOException ex) {
+                    Logger.getLogger(Subpage1.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
+    
+    public void setIcon() throws IOException {
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Images/ikona.png")));
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JLabel Profil;
     private javax.swing.JLabel bg;
+    private javax.swing.JLabel bg_background;
+    private javax.swing.JLabel bg_button;
+    private javax.swing.JLayeredPane dane_klienta;
     private javax.swing.JLabel exit;
     private javax.swing.JLabel minimize;
+    private javax.swing.JLabel tekst;
+    private javax.swing.JLabel tekst1;
+    private javax.swing.JLayeredPane wizyty;
     // End of variables declaration//GEN-END:variables
 }

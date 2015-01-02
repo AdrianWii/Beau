@@ -6,6 +6,10 @@
 
 package View;
 
+import java.awt.Toolkit;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 
 /**
@@ -17,8 +21,9 @@ public class Login extends javax.swing.JFrame {
     /**
      * Creates new form Login
      */
-    public Login() {
+    public Login() throws IOException {
         initComponents();
+        setIcon();
     }
 
     /**
@@ -146,9 +151,17 @@ public class Login extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Login().setVisible(true);
+                try {
+                    new Login().setVisible(true);
+                } catch (IOException ex) {
+                    Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
+    }
+    
+    public void setIcon() throws IOException {
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Images/ikona.png")));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
