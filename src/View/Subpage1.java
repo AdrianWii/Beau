@@ -20,9 +20,12 @@ public class Subpage1 extends javax.swing.JFrame {
     /**
      * Creates new form Subpage1
      */
+            
     public Subpage1() throws IOException {
         initComponents();
         setIcon();
+        klient.setVisible(false);
+        klient1.setVisible(false);
     }
 
     /**
@@ -34,6 +37,15 @@ public class Subpage1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        klient1 = new javax.swing.JLayeredPane();
+        tekst8 = new javax.swing.JLabel();
+        bg_background6 = new javax.swing.JLabel();
+        klient = new javax.swing.JLayeredPane();
+        tekst7 = new javax.swing.JLabel();
+        bg_background5 = new javax.swing.JLabel();
+        wyloguj = new javax.swing.JLayeredPane();
+        tekst6 = new javax.swing.JLabel();
+        bg_background4 = new javax.swing.JLabel();
         funkcyjny = new javax.swing.JLayeredPane();
         tekst5 = new javax.swing.JLabel();
         bg_background3 = new javax.swing.JLabel();
@@ -61,6 +73,75 @@ public class Subpage1 extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        tekst8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        tekst8.setForeground(new java.awt.Color(255, 255, 255));
+        tekst8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tekst8.setLabelFor(tekst);
+        tekst8.setText("<html><center>EDYTUJ<br>DANE<br>KLIENTA</center></html>");
+        tekst8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tekst8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                tekst8MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                tekst8MouseExited(evt);
+            }
+        });
+        klient1.add(tekst8);
+        tekst8.setBounds(0, 0, 110, 110);
+
+        bg_background6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/small_1.png"))); // NOI18N
+        klient1.add(bg_background6);
+        bg_background6.setBounds(0, 0, 110, 110);
+
+        getContentPane().add(klient1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 190, 110, 110));
+
+        tekst7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        tekst7.setForeground(new java.awt.Color(255, 255, 255));
+        tekst7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tekst7.setLabelFor(tekst);
+        tekst7.setText("<html><center>DODAJ<br>KLIENTA</center></html>");
+        tekst7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tekst7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                tekst7MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                tekst7MouseExited(evt);
+            }
+        });
+        klient.add(tekst7);
+        tekst7.setBounds(0, 0, 110, 110);
+
+        bg_background5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/small_1.png"))); // NOI18N
+        klient.add(bg_background5);
+        bg_background5.setBounds(0, 0, 110, 110);
+
+        getContentPane().add(klient, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, 110, 110));
+
+        tekst6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        tekst6.setForeground(new java.awt.Color(255, 255, 255));
+        tekst6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tekst6.setLabelFor(tekst);
+        tekst6.setText("<html><center>WYLOGUJ</center></html>");
+        tekst6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tekst6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                tekst6MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                tekst6MouseExited(evt);
+            }
+        });
+        wyloguj.add(tekst6);
+        tekst6.setBounds(0, 0, 110, 110);
+
+        bg_background4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/small_1.png"))); // NOI18N
+        wyloguj.add(bg_background4);
+        bg_background4.setBounds(0, 0, 110, 110);
+
+        getContentPane().add(wyloguj, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, 110, 110));
+
         tekst5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         tekst5.setForeground(new java.awt.Color(255, 255, 255));
         tekst5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -68,6 +149,9 @@ public class Subpage1 extends javax.swing.JFrame {
         tekst5.setText("<html><center>FUNKCJE</center></html>");
         tekst5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tekst5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tekst5MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 tekst5MouseEntered(evt);
             }
@@ -335,6 +419,44 @@ public class Subpage1 extends javax.swing.JFrame {
         bg_background3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/blue.png")));
     }//GEN-LAST:event_tekst5MouseExited
 
+    private void tekst6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tekst6MouseEntered
+        bg_background4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/small.png")));
+    }//GEN-LAST:event_tekst6MouseEntered
+
+    private void tekst6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tekst6MouseExited
+        bg_background4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/small_1.png")));
+    }//GEN-LAST:event_tekst6MouseExited
+
+    private void tekst5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tekst5MouseClicked
+        /*dodać rozpoznawanie typu użytkownika*/
+        /* ! */
+
+        if(klient.isVisible()){
+            klient.setVisible(false);
+            klient1.setVisible(false);
+        }
+        else{
+            klient.setVisible(true);
+            klient1.setVisible(true);
+        }
+    }//GEN-LAST:event_tekst5MouseClicked
+
+    private void tekst7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tekst7MouseEntered
+        bg_background5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/small.png")));
+    }//GEN-LAST:event_tekst7MouseEntered
+
+    private void tekst7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tekst7MouseExited
+        bg_background5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/small_1.png")));
+    }//GEN-LAST:event_tekst7MouseExited
+
+    private void tekst8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tekst8MouseEntered
+        bg_background6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/small.png")));
+    }//GEN-LAST:event_tekst8MouseEntered
+
+    private void tekst8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tekst8MouseExited
+        bg_background6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/small_1.png")));
+    }//GEN-LAST:event_tekst8MouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -372,6 +494,7 @@ public class Subpage1 extends javax.swing.JFrame {
                 }
             }
         });
+        
     }
     
     public void setIcon() throws IOException {
@@ -385,11 +508,16 @@ public class Subpage1 extends javax.swing.JFrame {
     private javax.swing.JLabel bg_background1;
     private javax.swing.JLabel bg_background2;
     private javax.swing.JLabel bg_background3;
+    private javax.swing.JLabel bg_background4;
+    private javax.swing.JLabel bg_background5;
+    private javax.swing.JLabel bg_background6;
     private javax.swing.JLabel bg_button;
     private javax.swing.JLabel bg_button1;
     private javax.swing.JLayeredPane dane_klienta;
     private javax.swing.JLabel exit;
     private javax.swing.JLayeredPane funkcyjny;
+    private javax.swing.JLayeredPane klient;
+    private javax.swing.JLayeredPane klient1;
     private javax.swing.JLabel minimize;
     private javax.swing.JLabel tekst;
     private javax.swing.JLabel tekst1;
@@ -397,9 +525,13 @@ public class Subpage1 extends javax.swing.JFrame {
     private javax.swing.JLabel tekst3;
     private javax.swing.JLabel tekst4;
     private javax.swing.JLabel tekst5;
+    private javax.swing.JLabel tekst6;
+    private javax.swing.JLabel tekst7;
+    private javax.swing.JLabel tekst8;
     private javax.swing.JLayeredPane usun_produkt;
     private javax.swing.JLayeredPane wizyty;
     private javax.swing.JLayeredPane wizyty1;
     private javax.swing.JLayeredPane wizyty2;
+    private javax.swing.JLayeredPane wyloguj;
     // End of variables declaration//GEN-END:variables
 }
