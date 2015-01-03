@@ -17,6 +17,7 @@ public class Uzytkownik {
     private String email;
     private String miejscowosc;
     private String ulica;
+    public int id_dane;
     
     public String get_imie()
     {

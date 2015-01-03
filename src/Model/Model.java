@@ -55,5 +55,38 @@ public class Model {
      
          return true;
      }  
+    
+    public boolean UsunKon(int id) throws SQLException{
+       PreparedStatement prepStmt1;
+       prepStmt1 = base.connection.prepareStatement("DELETE FROM DANE WHERE id_dane=?");
+       prepStmt1.setInt(1, id);         
+       prepStmt1.execute();
+       PreparedStatement prepStmt2; // relacje w sqlite????
+       prepStmt2 = base.connection.prepareStatement("DELETE FROM KONTRAHENT WHERE id_dane=?");
+       prepStmt2.setInt(1, id);         
+       prepStmt2.execute();
+       return true;
     }
+    
+    public boolean EdytujKon(Kontrahent osoba) throws SQLException{
+        PreparedStatement prepStmt1;
+        PreparedStatement prepStmt2;
+        prepStmt1 = base.connection.prepareStatement("UPDATE DANE SET IMIE=?, NAZWISKO=?, TELEFON=?, EMAIL=?, MIEJSCOWOSC=?, ULICA=? WHERE ID_DANE=?");
+                 prepStmt1.setString(1, osoba.get_imie());
+                 prepStmt1.setString(2, osoba.get_nazwisko());
+                 prepStmt1.setString(3, osoba.get_telefon());
+                 prepStmt1.setString(4, osoba.get_email());
+                 prepStmt1.setString(5, osoba.get_miejscowosc());
+                 prepStmt1.setString(6, osoba.get_ulica());
+                 prepStmt1.setInt(7, osoba.id_dane);
+                 prepStmt1.execute();
+        prepStmt2 = base.connection.prepareStatement("UPDATE KONTRAHENT SET NAZWA_FIRMY=?, NIP=? WHERE ID_DANE=?");
+                prepStmt2.setString(1, osoba.get_nazwa_firmy());
+                prepStmt2.setInt(2, osoba.get_nip());
+                prepStmt2.setInt(3, osoba.id_dane);
+                prepStmt2.execute();
+          return true;
+    }
+    
+}
 

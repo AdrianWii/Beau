@@ -32,15 +32,46 @@ public class Controler {
         this.theLogin.addkeyListener(new keyListener());
     }
     
-    public void Dodaj_Kontrahent()
+    public void Dodaj_Kontrahent() // teścik
     {
         Kontrahent osoba  = new Kontrahent();
-        osoba.DodajKontrahenta("karolina", "kowalska", "886-444-111", "karolinakowalska@onet.pl", "Krakow", "Mogilska 45", "Hejjjjjj", 323); // test
+        osoba.DodajKontrahenta("karolina", "kowalska", "886-444-111", "karolinakowalska@onet.pl", "Krakow", "Mogilska 45", "Hejjjjjj", 323); 
         try {
              theModel.DodajKon(osoba);
          } catch (SQLException ex) {
              Logger.getLogger(Controler.class.getName()).log(Level.SEVERE, null, ex);
          }
+    }
+    
+    public void Usun_Kontrahent(int id_dane) // teścik
+    {
+       try {
+             theModel.UsunKon(id_dane);
+         } catch (SQLException ex) {
+             Logger.getLogger(Controler.class.getName()).log(Level.SEVERE, null, ex);
+         }  
+    }
+    
+    public void Edytuj_Kontrahent()
+    {
+        // test
+        Kontrahent osoba = new Kontrahent();
+        osoba.set_imie("Monika");
+        osoba.set_nazwisko("Kowalska");
+        osoba.set_telefon("506-781-639");
+        osoba.set_email("monika_kowalska@onet.pl");
+        osoba.set_miejscowosc("Warszawa");
+        osoba.set_ulica("Zakopianska 87/12");
+        osoba.set_nazwa_firmy("Siemcia");
+        osoba.set_nip(999);
+        osoba.id_dane=10;
+        // test
+        try {
+             theModel.EdytujKon(osoba);
+         } catch (SQLException ex) {
+             Logger.getLogger(Controler.class.getName()).log(Level.SEVERE, null, ex);
+         } 
+        
     }
     class keyListener implements ActionListener {
 
