@@ -35,7 +35,7 @@ public class Controler {
     public void Dodaj_Kontrahent()
     {
         Kontrahent osoba  = new Kontrahent();
-        osoba.DodajKontrahenta("", "", "", "", "", "", "Hello", 567); // test
+        osoba.DodajKontrahenta("karolina", "kowalska", "886-444-111", "karolinakowalska@onet.pl", "Krakow", "Mogilska 45", "Hejjjjjj", 323); // test
         try {
              theModel.DodajKon(osoba);
          } catch (SQLException ex) {

@@ -24,14 +24,36 @@ public class Model {
     
     BaseConnection base = BaseConnection.getBase(); 
     public boolean DodajKon(Kontrahent osoba) throws SQLException{ // test
-         PreparedStatement prepStmt;
-                 prepStmt = base.connection.prepareStatement("INSERT INTO KONTRAHENT VALUES(NULL, NULL, ?, ?);");
-                 System.out.println(osoba.get_nazwa_firmy());
+         PreparedStatement prepStmt1;
+         PreparedStatement prepStmt2;
+         int id=0;
+                 prepStmt1 = base.connection.prepareStatement("INSERT INTO DANE VALUES(NULL, ?, ?, ?, ?, ?, ?);");
+                 prepStmt1.setString(1, osoba.get_imie());
+                 prepStmt1.setString(2, osoba.get_nazwisko());
+                 prepStmt1.setString(3, osoba.get_telefon());
+                 prepStmt1.setString(4, osoba.get_email());
+                 prepStmt1.setString(5, osoba.get_miejscowosc());
+                 prepStmt1.setString(6, osoba.get_ulica());
+                 prepStmt1.execute();
+                
+        try (ResultSet generatedKeys=base.st.getGeneratedKeys()) {
+            if (generatedKeys.next()) {
+                id=generatedKeys.getInt(1);
+            }
+            else {
+                throw new SQLException("No ID obtained.");
+            }
+        }
+                 prepStmt2 = base.connection.prepareStatement("INSERT INTO KONTRAHENT VALUES(NULL, ?, ?, ?);");
+                 System.out.println(id);
                  System.out.println(osoba.get_nip());
-                 prepStmt.setString(1, osoba.get_nazwa_firmy());
-                 prepStmt.setInt(2, osoba.get_nip());
-                 prepStmt.execute();
+                 System.out.println(osoba.get_nazwa_firmy());
+                 prepStmt2.setInt(1, id);
+                 prepStmt2.setString(2, osoba.get_nazwa_firmy());
+                 prepStmt2.setInt(3, osoba.get_nip());
+                 prepStmt2.execute();
      
          return true;
-     }
+     }  
     }
+
