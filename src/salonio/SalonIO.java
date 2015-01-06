@@ -40,9 +40,7 @@ public class SalonIO {
         Kontrahent theKontrahent = new Kontrahent();
         Model theModel = new Model();
         Controler theControler = new Controler(theLogin,theSubpage1,theKontrahent,theModel);
-        //theControler.Dodaj_Kontrahent(); // test
-        //theControler.Usun_Kontrahent(8); // test
-        //theControler.Edytuj_Kontrahent(); //test
+       
     }
     
 }

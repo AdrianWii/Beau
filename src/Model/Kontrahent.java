@@ -6,6 +6,9 @@
 
 package Model;
 
+import Model.Mail;
+import javax.mail.MessagingException;
+
 /**
  *
  * @author Joanna
@@ -95,10 +98,15 @@ public class Kontrahent extends Uzytkownik{
             this.set_nip(nnip);
     }
     
-    public void SkontantujZKontrahentem()
+    public void SkontantujZKontrahentem(String email, String subject, String text)
     {
-        //...
+        try {
+            new Mail(email, subject, text).send();
+        } catch (MessagingException e) {
+            e.printStackTrace();
+        }
     }
+}
     
- }
+
 
