@@ -13,6 +13,7 @@ package Model;
 public class Pracownik extends Uzytkownik {
     private String login;
     private String haslo;
+    public int id_typu;
     
     public String get_login()
     {
@@ -31,7 +32,7 @@ public class Pracownik extends Uzytkownik {
         this.haslo=hhaslo;
     }
     public void DodajPracownika(String iimie, String nnazwisko, String ttelefon, String eemail, String mmiejscowosc,
-            String uulica, String llogin, String hhaslo)
+            String uulica, String llogin, String hhaslo, int id_typu)
     {
         if(iimie.length()>0)
             this.set_imie(iimie);
@@ -65,6 +66,7 @@ public class Pracownik extends Uzytkownik {
             this.set_haslo(hhaslo);
         else
             this.set_haslo(null);  
+        this.id_typu=id_typu;
     }
     
     public void UsunPracownika()
@@ -73,7 +75,7 @@ public class Pracownik extends Uzytkownik {
     }
     
     public static Pracownik Zaloguj(String iimie, String nnazwisko, String ttelefon, String eemail, String mmiejscowosc,
-            String uulica, String llogin, String hhaslo, int id_dane)
+            String uulica, String llogin, String hhaslo, int id_dane, int id_typu)
     {
         Pracownik osoba=new Pracownik();
         osoba.set_imie(iimie);
@@ -85,6 +87,7 @@ public class Pracownik extends Uzytkownik {
         osoba.set_login(llogin);
         osoba.set_haslo(hhaslo);
         osoba.id_dane=id_dane;
+        osoba.id_typu=id_typu;
         return osoba;
     }
     
