@@ -6,6 +6,7 @@
 
 package Model;
 
+import Handler.ExceptionHandler;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -87,6 +88,34 @@ public class Model {
                 prepStmt2.execute();
           return true;
     }
-    
+        
+        public Pracownik ZalogujPracownika(String login, String haslo)
+        {
+            ResultSet result1=null;
+            ResultSet result2=null;
+            Pracownik pracownik=null;
+            int id;
+            try
+            {
+                if(login!=null || haslo!= null)
+                {
+                    result1=base.st.executeQuery("SELECT * FROM PRACOWNICY WHERE LOGIN="+login+"AND HASLO="+haslo);
+                    id=result1.getInt("ID_DANE");
+                    result2=base.st.executeQuery("SELECT * FROM PRACOWNICY WHERE ID_DANE="+id);
+                    pracownik=Pracownik.Zaloguj(result2.getString("IMIE"), result2.getString("NAZWISKO"), result2.getString("TELEFON"),
+                            result2.getString("EMAIL"), result2.getString("MIEJSCOWOSC"), result2.getString("ULICA"), result1.getString("LOGIN"),
+                            result1.getString("HASLO"), id);
+                }
+            }catch (SQLException e) {
+            ExceptionHandler.handle(e, ExceptionHandler.MESSAGE);
+        }
+          return pracownik;
+        }
+        
+        public void WyswietlGrafik(int id_pracownika)
+        {
+            
+        }
 }
+ 
 

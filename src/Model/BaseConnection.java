@@ -19,7 +19,7 @@ public class BaseConnection {
     
      private final static BaseConnection temp = new BaseConnection();
     public static final String DRIVER = "org.sqlite.JDBC";
-    public static final String DB_URL = "jdbc:sqlite:bazatest.db"; // baza testowa
+    public static final String DB_URL = "jdbc:sqlite:database.db"; // baza testowa
     public Connection connection;
     public Statement st;
         
